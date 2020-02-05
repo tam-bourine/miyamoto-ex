@@ -1,0 +1,8 @@
+root = true
+
+[{src,scripts,tests,_tests_,_test_utils_}/**.{ts,json,js}]
+charset = utf-8
+end_of_line = lf
+indent_size = 2
+indent_style = space
+trim_trailing_whitespace = true
