@@ -145,7 +145,7 @@
 ### Slack Outgoingの設定
 
 - SlackAppsのページに移動します
-  - [SlackApps](https://tam-bourine.slack.com/apps)
+  - [SlackApps](https://slack.com/apps)
 - 検索窓から `outgoing`と入力します
   - ![outgoing](https://user-images.githubusercontent.com/35181442/62426812-cd257300-b724-11e9-84c3-66320ce4bb0a.png)
 
@@ -171,7 +171,7 @@
 - このbotの名前を変更した場合は、「無視するユーザ」にその名前を加えてください。
   - ![ignore](https://user-images.githubusercontent.com/35181442/62426853-4c1aab80-b725-11e9-82c4-a2ba645b8701.png)
 - 週の休日は「Day Off」の欄に,(カンマ)区切りで入力します。
-- これで設置が終わりました。どんなメッセージに反応するかは、[timesheets.js](https://github.com/tam-bourine/Miyamoto-san-EX/blob/master/scripts/timesheets.js)の正規表現を読み解いてください。
+- これで設置が終わりました。どんなメッセージに反応するかは、[timesheets.js](https://github.com/tam-bourine/miyamoto-ex/blob/master/scripts/timesheets.js)の正規表現を読み解いてください。
   - TODO: リソースファイル化予定
 
 ## メッセージの変更
