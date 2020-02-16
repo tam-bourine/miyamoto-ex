@@ -1,6 +1,6 @@
 import { isEqual } from "../node_modules/underscore";
 import { DateUtils } from "../test_utils/date_utils_test";
-import * as moment from 'moment-mini-ts'
+import * as moment from "moment-mini-ts";
 
 const dateUtils = new DateUtils();
 const year : number = moment().year();
