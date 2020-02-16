@@ -3,7 +3,7 @@
 export class EventListener {
   events = {};
   // イベントを捕捉
-  eventListenerOn(eventName: string, func: string) {
+  eventListenerOn(eventName: string, func: any) :void{
     if (this.events[eventName]) {
       this.events[eventName].push(func);
     } else {
