@@ -3,7 +3,7 @@
 export class EventListener {
   events = {};
   // イベントを捕捉
-  eventListenerOn(eventName: string, func: any) :void{
+  eventListenerOn(eventName: string, func: string): void {
     if (this.events[eventName]) {
       this.events[eventName].push(func);
     } else {
@@ -16,6 +16,7 @@ export class EventListener {
     const funcs = this.events[eventName];
     if (!funcs) return false;
     for (let i = 0; i < funcs.length; ++i) {
+      // eslint-disable-next-line prefer-rest-params
       funcs[i].apply(this, Array.prototype.slice.call(arguments, 1));
     }
   }
