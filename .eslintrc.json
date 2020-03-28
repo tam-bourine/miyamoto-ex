@@ -1,16 +1,26 @@
 {
-    "plugins": [
-        "@typescript-eslint",
-        "googleappsscript"
-    ],
-    "env": {
-        "node": true,
-        "es6": true,
-        "googleappsscript/googleappsscript": true
-    },
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-        "sourceType": "module",
-        "project": "./tsconfig.json"
-    }
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "plugins": [
+    "@typescript-eslint",
+    "googleappsscript"
+  ],
+  "env": {
+    "node": true,
+    "es6": true,
+    "googleappsscript/googleappsscript": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "no-eq-null": 2
+  }
 }
