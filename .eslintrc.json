@@ -6,10 +6,7 @@
     "plugin:prettier/recommended",
     "prettier/@typescript-eslint"
   ],
-  "plugins": [
-    "@typescript-eslint",
-    "googleappsscript"
-  ],
+  "plugins": ["@typescript-eslint", "googleappsscript"],
   "env": {
     "node": true,
     "es6": true,
@@ -21,6 +18,7 @@
     "project": "./tsconfig.json"
   },
   "rules": {
-    "no-eq-null": 2
+    "no-eq-null": 2,
+    "ignoreRestArgs": false
   }
 }
