@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "dist",
+    "declaration": true
+  },
+  "include": [
+    "test_utils/**/*.ts"
+  ],
+  "exclude": [
+    "tests/**/*.spec.ts",
+    "node_modules"
+  ]
+}

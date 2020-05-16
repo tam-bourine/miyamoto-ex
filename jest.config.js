@@ -2,6 +2,7 @@ module.exports = {
   globals: {
     'ts-jest': {
       tsConfig: false,
+      diagnostics: false,
       diagnostics: {
         pathRegex: /\.(spec|test)\.ts$/,
       }

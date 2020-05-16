@@ -1,9 +1,9 @@
 import { isEqual } from "../node_modules/underscore";
 import { DateUtils } from "../test_utils/date_utils_test";
-import * as moment from "moment";
+import * as moment from "moment-mini-ts";
 
 const dateUtils = new DateUtils();
-
+const year : number = moment().year();
 describe("dateUtils_parseTime", () => {
   it("dateUtils_parseTime: #1", () => {
     const dateUtils_parseTime = () => {
@@ -58,35 +58,30 @@ describe("dateUtils_parseTime", () => {
 describe("dateUtils_parseDate", () => {
   it("dateUtils_parseDate: #1", () => {
     const dateUtils_parseDate = () => {
-      dateUtils.dateUtilsNow(new Date(2019, 1 - 1, 1, 0, 0, 0));
-      return isEqual([2019, 12, 31], dateUtils.dateUtilsParseDate("12/31"));
+      return isEqual([year, 12, 31], dateUtils.dateUtilsParseDate("12/31"));
     };
     expect(dateUtils_parseDate()).toBe(true);
   });
   it("dateUtils_parseDate: #2", () => {
     const dateUtils_parseDate = () => {
-      dateUtils.dateUtilsNow(new Date(2019, 1 - 1, 1, 0, 0, 0));
-      return isEqual([2019, 1, 1], dateUtils.dateUtilsParseDate("1/1"));
+      return isEqual([year, 1, 1], dateUtils.dateUtilsParseDate("1/1"));
     };
     expect(dateUtils_parseDate()).toBe(true);
   });
   it("dateUtils_parseDate: #3", () => {
     const dateUtils_parseDate = () => {
-      dateUtils.dateUtilsNow(new Date(2019, 1 - 1, 1, 0, 0, 0));
-      return isEqual([2019, 2, 3], dateUtils.dateUtilsParseDate("2月3日"));
+      return isEqual([year, 2, 3], dateUtils.dateUtilsParseDate("2月3日"));
     };
     expect(dateUtils_parseDate()).toBe(true);
   });
   it("dateUtils_parseDate: #4", () => {
     const dateUtils_parseDate = () => {
-      dateUtils.dateUtilsNow(new Date(2019, 1 - 1, 1, 0, 0, 0));
       return isEqual([2020, 1, 1], dateUtils.dateUtilsParseDate("2020/1/1"));
     };
     expect(dateUtils_parseDate()).toBe(true);
   });
   it("dateUtils_parseDate: #5", () => {
     const dateUtils_parseDate = () => {
-      dateUtils.dateUtilsNow(new Date(2019, 1 - 1, 1, 0, 0, 0));
       return isEqual(
         [1976, 2, 8],
         dateUtils.dateUtilsParseDate("1976年2月8日")
@@ -96,7 +91,6 @@ describe("dateUtils_parseDate", () => {
   });
   it("dateUtils_parseDate: #6", () => {
     const dateUtils_parseDate = () => {
-      dateUtils.dateUtilsNow(new Date(2019, 1 - 1, 1, 0, 0, 0));
       const nowYeary = Number(moment().format("YYYY"));
       const nowMonth = Number(moment().format("MM"));
       const nowDay = Number(
@@ -111,7 +105,6 @@ describe("dateUtils_parseDate", () => {
   });
   it("dateUtils_parseDate: #7", () => {
     const dateUtils_parseDate = () => {
-      dateUtils.dateUtilsNow(new Date(2019, 1 - 1, 1, 0, 0, 0));
       const nowYeary = Number(moment().format("YYYY"));
       const nowMonth = Number(moment().format("MM"));
       const nowDay = Number(moment().format("DD"));
@@ -122,7 +115,6 @@ describe("dateUtils_parseDate", () => {
   });
   it("dateUtils_parseDate: #8", () => {
     const dateUtils_parseDate = () => {
-      dateUtils.dateUtilsNow(new Date(2019, 1 - 1, 1, 0, 0, 0));
       const nowYeary = Number(moment().format("YYYY"));
       const nowMonth = Number(moment().format("MM"));
       const nowDay = Number(
@@ -140,7 +132,6 @@ describe("dateUtils_parseDate", () => {
 describe("dateUtils_parseWday", () => {
   it("dateUtils_parseWday: #1", () => {
     const dateUtils_parseWday = () => {
-      dateUtils.dateUtilsNow(new Date(2019, 1 - 1, 1, 0, 0, 0));
       return isEqual([3], dateUtils.dateUtilsParseWday("水曜日"));
     };
     expect(dateUtils_parseWday()).toBe(true);
@@ -148,7 +139,6 @@ describe("dateUtils_parseWday", () => {
 
   it("dateUtils_parseWday: #2", () => {
     const dateUtils_parseWday = () => {
-      dateUtils.dateUtilsNow(new Date(2019, 1 - 1, 1, 0, 0, 0));
       return isEqual([3], dateUtils.dateUtilsParseWday("Wed"));
     };
     expect(dateUtils_parseWday()).toBe(true);
@@ -156,7 +146,6 @@ describe("dateUtils_parseWday", () => {
 
   it("dateUtils_parseWday: #3", () => {
     const dateUtils_parseWday = () => {
-      dateUtils.dateUtilsNow(new Date(2019, 1 - 1, 1, 0, 0, 0));
       return isEqual([], dateUtils.dateUtilsParseWday("あ"));
     };
     expect(dateUtils_parseWday()).toBe(true);
@@ -164,7 +153,6 @@ describe("dateUtils_parseWday", () => {
 
   it("dateUtils_parseWday: #4", () => {
     const dateUtils_parseWday = () => {
-      dateUtils.dateUtilsNow(new Date(2019, 1 - 1, 1, 0, 0, 0));
       return isEqual([0, 1], dateUtils.dateUtilsParseWday("月日"));
     };
     expect(dateUtils_parseWday()).toBe(true);
