@@ -1153,9 +1153,9 @@ diff-sequences@^24.9.0:
   integrity sha512-Dj6Wk3tWyTE+Fo1rW8v0Xhwk80um6yFYKbuAxc9c3EZxIHFDYwbi34Uk42u1CdnIiVorvt4RmlSDjIPyzGC2ew==
 
 dns-packet@^5.1.2:
-  version "5.2.1"
-  resolved "https://registry.yarnpkg.com/dns-packet/-/dns-packet-5.2.1.tgz#26cec0be92252a1b97ed106482921192a7e08f72"
-  integrity sha512-JHj2yJeKOqlxzeuYpN1d56GfhzivAxavNwHj9co3qptECel27B1rLY5PifJAvubsInX5pGLDjAHuCfCUc2Zv/w==
+  version "5.2.4"
+  resolved "https://registry.yarnpkg.com/dns-packet/-/dns-packet-5.2.4.tgz#e004f409eadfa8ec861964dcb9eb395884fcf67d"
+  integrity sha512-vgu5Bx5IV8mXmh/9cn1lzn+J7okFlXe1vBRp+kCBJXg1nBED6Z/Q4e+QaDxQRSozMr14p/VQmdXwsf/I2wGjUA==
   dependencies:
     ip "^1.1.5"
 
@@ -3123,6 +3123,11 @@ mkdirp@0.x, mkdirp@^0.5.1:
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   dependencies:
     minimist "0.0.8"
+
+moment-mini-ts@^2.20.1:
+  version "2.20.1"
+  resolved "https://registry.yarnpkg.com/moment-mini-ts/-/moment-mini-ts-2.20.1.tgz#8b54a823848e91f11c56e36e253edf80c8974719"
+  integrity sha512-X8CHo8rq0ZgyGFvqc117uc8JJzAQPBzFj9ExEP/ei7Lcvv7iyEQp5m1JTv7l1EtleQbbKfwXmy2FQNBcmorLzA==
 
 moment@^2.24.0:
   version "2.24.0"
